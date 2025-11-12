@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>Ювелирные изделия</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- Прога Антона -->
+    <!-- Первый, главный сектор -->
+    <Main_sector class="Main_sector">
+        <div class="background">
+            <img class="background_Main" src="Photo/background.png" alt="Фон">
+        </div>
+            <!--Навигация-->
+            <navigation class="navigation_sector">
+                <img class="logo_OJJO" src="Photo\logo - OJJO.jpg" alt="Главный логотип">
+                <div class="nav_png">
+                    <img class="Loupe" src="Photo\Loupe.png" alt="Лупа">
+                    <img class="mdi_account" src="Photo\mdi_account.png" alt="Профиль">
+                    <img class="HearT" src="Photo\HearT.png" alt="Сердце">
+                </div>
+                <div class="navigation-txt">
+                    <div class="nav1">
+                        <a class="Контрагентам" href="#">Контрагентам</a>
+                        <a class="Дизайнерам" href="#">Дизайнерам</a>
+                        <a class="Вакансии" href="#">Вакансии</a>
+                    </div>
+                    <div class="nav2">
+                        <a class="Поиск" href="#">Поиск</a>
+                        <a class="Вход_Регистрация" href="#">Вход/Регистрация</a>
+                    </div>
+                </div>
+            </navigation>
+            <Botton class="botton">
+                <h1 class="botton_txt">Долго, дорого, богато</h1>
+                <img class="catalog" src="Photo\button-1 - catalog.png" alt="Каталог">
+            <div class="CocoFine">
+                <img src="Photo\Надпись внизу.png" alt="надпись внизу 1">
+                <img src="Photo\Надпись внизу.png" alt="надпись внизу 2">
+                <img src="Photo\Надпись внизу.png" alt="надпись внизу 3">
+                <img src="Photo\Надпись внизу.png" alt="надпись внизу 4">
+                <img src="Photo\Надпись внизу.png" alt="надпись внизу 5">
+                <img src="Photo\Надпись внизу.png" alt="надпись внизу 6">
+            </div>
+            </Botton>
+    </Main_sector>
+
+<!--Второй сектор-->
+
+    <Second_sector>
+        <div class="sec_sec_txt">
+            <a class="event" href="#">К мероприятиям</a>  
+            <h1 class="beauty" href="#">Настоящая красота здесь!</h1>
+        </div>
+        <button-txt_top class="button-txt_top">
+            <img src="Photo\button-2 - Свадьба.png" alt="Свадьба">
+            <img src="Photo\button-3-7.png" alt="Белая Кнопка">
+            <img src="Photo\button-3-7.png" alt="Белая Кнопка">
+            <img src="Photo\button-3-7.png" alt="Белая Кнопка">
+            <img src="Photo\button-3-7.png" alt="Белая Кнопка">
+            <img src="Photo\button-3-7.png" alt="Белая Кнопка">
+        </button-txt_top>
+        <txt_top class="txt_top">
+            <a class="i1" href="#">Мужу</a>
+            <a class="i2" href="#">Жене</a>
+            <a class="i3" href="#">Партнёру</a>
+            <a class="i4" href="#">Коллекции</a>
+        </txt_top>
+        <a class="i5" href="#">Редкость</a>
+        <png class="png">
+            <div class="slides">
+                <div class="png1M">
+                    <img src="Photo\Rectangle 5..png" alt="Кольца">
+                    <div class="txt_png1">
+                        <a class="rings" href="#">Кольца</a>
+                    </div>
+                </div>
+                <div class="png2M">
+                    <img src="Photo\Rectangle 5.png" alt="Серьги">
+                    <div class="txt_png1">
+                        <a class="earrings" href="#">Серьги</a>
+                    </div>
+                </div>
+                <div class="png3M">
+                    <img src="Photo\Rectangle 5 (1).png" alt="Подвески">
+                    <div class="txt_png1">
+                        <a class="suspensions" href="#">Подвески</a>
+                    </div>
+                </div>
+                <div class="png4M">
+                    <img src="Photo\Rectangle 5 (2).png" alt="Запонки">
+                    <div class="txt_png1">
+                        <a class="cufflinks" href="#">Запонки</a>
+                    </div>
+                </div>
+                <div class="png5M">
+                    <img src="Photo\Rectangle 5 (3).png" alt="Браслеты">
+                    <div class="txt_png1">
+                        <a class="bracelets" href="#">Браслеты</a>
+                    </div>
+                </div>
+                <div class="png6M">
+                    <img src="Photo\Rectangle 5 (4).png" alt="Часы">
+                    <div class="txt_png1">
+                        <a class="watch" href="#">Часы</a>
+                    </div> 
+                </div>
+            </div>
+              <button id="prev">&#10094;</button>
+            <button id="next">&#10095;</button>
+        </png>
+    </Second_sector>
+
+<script>
+    const slides = document.getElementById('slides');
+  const slideCount = slides.children.length;
+  let currentIndex = 0;
+  const slideWidth = 300;
+
+  function showSlide(index) {
+    slides.style.left = -index * slideWidth + 'px';
+    currentIndex = index;
+  }
+
+  document.getElementById('prev').addEventListener('click', () => {
+    showSlide(currentIndex - 1);
+  });
+
+  document.getElementById('next').addEventListener('click', () => {
+    showSlide(currentIndex + 1);
+  });
+
+  showSlide(0);
+
+</script>
+</body>
+</html>
